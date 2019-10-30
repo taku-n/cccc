@@ -1,5 +1,5 @@
-# cdcc
-Continuous Deployment, Continuous Certification. Using external volume to keep certification.
+# cccc
+Continuous enCryption, Continuous Certification. Using external volume to keep certification.
 
 Example
 =======
