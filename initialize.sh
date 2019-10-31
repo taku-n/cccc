@@ -1,5 +1,5 @@
 #!/bin/sh
-envsubst '$$LINK_NAME,$$DOMAIN' < /etc/nginx/nginx.template > /etc/nginx/nginx.conf
-certbot certonly --standalone -t -d ${DOMAIN} -m ${E_MAIL} --agree-tos -n
+
+certbot certonly --standalone -t -d your.domain -m your@email.address --agree-tos -n
 nginx
 crond -f
