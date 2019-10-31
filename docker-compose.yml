@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+
+  cccc:
+    build: .
+    image: cccc
+    ports:
+      - "80:80"
+      - "443:443"
+
+  web:
+    image: nginx:alpine
+    volumes:
+      - ./web/log:/var/log/nginx
+      - ./web/html:/usr/share/nginx/html
