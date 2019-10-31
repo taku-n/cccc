@@ -1,4 +1,4 @@
-# cccc
+# CCCC
 Continuous enCryption, Continuous Certification. Using external volume to keep certification.
 
 Example
