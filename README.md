@@ -4,7 +4,7 @@ Continuous enCryption, Continuous Certification. Using external volume to keep c
 Example
 =======
 
-You will get a reverse proxy with TLS and a web server.
+You get a reverse proxy with TLS and a web server.
 
 ```
 $ git clone https://github.com/taku-n/cccc.git  
