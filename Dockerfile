@@ -1,16 +1,15 @@
 FROM nginx:alpine
 
 RUN apk update \
-    && apk --no-cache add certbot \
-    && mkdir -p /app/cert \
-    && mkdir -p /run/nginx
+    && apk --no-cache add certbot
 
-ADD initialize.sh  /app/cert
+RUN mkdir -p /app/cert
+
+ADD init.sh  /app/cert
 ADD renew.sh  /app/cert
-ADD root /var/spool/cron/crontabs
 
 WORKDIR /app/cert
 
 EXPOSE 80 443
 
-ENTRYPOINT ["sh", "./initialize.sh"]
+CMD ["sh", "./init.sh"]

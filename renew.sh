@@ -1,3 +1,3 @@
 #!/bin/sh
 
-certbot renew --pre-hook "nginx -s stop" --post-hook "nginx"
+certbot renew --post-hook "nginx -s reload"
