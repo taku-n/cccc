@@ -15,6 +15,11 @@ services:
       - ./cccc/conf.d:/etc/nginx/conf.d
       - ./cccc/log:/var/log/nginx
       - ./cccc/html:/usr/share/nginx/html
+    environment:
+      - DOMAIN=your.domain
+      - EMAIL=your@email.address
+      #- STAGE=production
+      - STAGE=staging
     restart: always
 
   web:
