@@ -4,27 +4,14 @@ Continuous enCryption, Continuous Certification. Using external volume to keep c
 Example
 =======
 
-On Hyper.sh
+You will get a reverse proxy with TLS and a web server.
 
 ```
-version: '2'
-
-services:
-  cdcc:
-    image: matoba/cdcc
-    ports:
-      - '80:80'
-      - '443:443'
-    links:
-      - webapp:webapp1
-    volumes: 
-      - cdcc:/etc/letsencrypt
-    environment:
-      DOMAIN: 'example.com'
-      E_MAIL: 'foobar@example.com'
-      LINK_NAME: 'webapp1'
-    fip: 199.245.56.122
-    size: s4
-  webapp:
-    image: some_webapp
+$ git clone https://github.com/taku-n/cccc.git  
+$ cd cccc  
+$ nvim init.sh  
+# Edit it.  
+$ nvim cccc/conf.d/cccc.conf  
+# Edit it.  
+$ docker-compose up -d
 ```
