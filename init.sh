@@ -1,5 +1,3 @@
-#!/bin/sh
-
 nginx
 
 if [ $STAGE = production ]; then
